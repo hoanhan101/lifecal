@@ -1,0 +1,32 @@
+{
+  "name": "estarter",
+  "productName": "EStarter",
+  "version": "1.0.0",
+  "description": "Kickstart Electron app with Bulma's dark theme & Materialize CSS",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "nodemon --exec electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=false --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Veryfi Sync\"",
+    "package-linux": "electron-packager . --overwrite --platform=linux --arch=x64 --icon=assets/icons/linux/icon.png --prune=false --out=release-builds"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoanhan101/estarter.git"
+  },
+  "author": "Hoanh An",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hoanhan101/estarter/issues"
+  },
+  "homepage": "https://github.com/hoanhan101/estarter#readme",
+  "devDependencies": {
+    "electron": "^15.2.0",
+    "electron-packager": "^15.4.0",
+    "nodemon": "^2.0.13"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0"
+  }
+}
